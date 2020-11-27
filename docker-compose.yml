@@ -1,0 +1,40 @@
+version: "3.7"
+services:
+# This is the main web server container that uses php:7.4-apache image with some mysql addons  
+  web-server:
+    build: 
+      dockerfile: Dockerfile
+      context: .
+    restart: always
+    volumes:
+      - "./sqli-labs:/var/www/html/"
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+
+# This is a simple mysql docker container
+  db:
+    image: mysql:latest 
+    command:  --general_log --general_log_file=/var/log/mysql/mysql.log
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - ./db/log:/var/log/mysql:Z
+      - "sql-data:/var/lib/mysql:rw"
+
+
+# This is just a phpmyadmin sontainer to monitor the db as the videos sometimes show interaction with the database directly if you don't want it you can comment it out.       
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: secret
+    ports:
+      - "8080:80"
+
+volumes:
+  sql-data:
