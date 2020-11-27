@@ -39,7 +39,7 @@ Sqli lab is hosted at [http://localhost:8000](http://localhost:8000)
 
 phpmyadmin is hosted at [http://localhost:8080](http://localhost:8080)
 
-Credentials for phpmyadmin:
+*Credentials for phpmyadmin:*
 
 username: **root**
 
@@ -48,3 +48,8 @@ password: **secret**
 ### Youtube tutorials for the labs 
 
 By Audi1 @[Youtube](https://www.youtube.com/playlist?list=PLkiAz1NPnw8qEgzS7cgVMKavvOAdogsro)
+
+### Mysql logs 
+
+The mysql logs are stored in the db/log folder in the mysql.log file.
+
