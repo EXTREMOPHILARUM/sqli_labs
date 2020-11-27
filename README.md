@@ -1,6 +1,6 @@
 # Project Title
 
-A Docker-compose file for the sqli-labs by @[Audi1](https://github.com/Audi-1) which was update to php7 by @[skyblueee](https://github.com/skyblueee). 
+A Docker-compose file for the sqli-labs by @[Audi1](https://github.com/Audi-1) which were updated to php7 by @[skyblueee](https://github.com/skyblueee). 
 
 
 ### Prerequisites
