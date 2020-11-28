@@ -25,7 +25,7 @@ services:
       - "sql-data:/var/lib/mysql:rw"
 
 
-# This is just a phpmyadmin sontainer to monitor the db as the videos sometimes show interaction with the database directly if you don't want it you can comment it out.       
+# This is just a phpmyadmin container to monitor the db as the videos sometimes show interaction with the database directly if you don't want it you can comment it out.       
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     restart: always
